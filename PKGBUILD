@@ -2,13 +2,13 @@
 
 pkgname=simpmusic-bin
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A FOSS YouTube Music client for Android and Desktop with many features from
 Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop."
 arch=(x86_64)
 url="https://www.simpmusic.org"
 license=('GPL-3.0')
-depends=('gstreamer' 'yt-dlp')
+depends=('gstreamer' 'gst-plugins-good' 'gst-plugins-bad' 'yt-dlp')
 
 provides=("${pkgname%-bin}")
 conflicts=("${pkgname%-bin}")
