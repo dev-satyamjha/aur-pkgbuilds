@@ -1,7 +1,10 @@
 # Maintainer: Daniel Alejandro <dalejan051@gmail.com>
 
+
 pkgname=simpmusic-bin
-pkgver=1.0.1
+_pkgver=1.0.1-hf
+pkgver=1.0.1_hf
+appver=1.0.1
 pkgrel=0
 pkgdesc="A FOSS YouTube Music client for Android and Desktop with many features from
 Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop."
@@ -14,9 +17,9 @@ conflicts=("${pkgname%}")
 options=("!strip" "!debug")
 
 source=(
-  "https://github.com/maxrave-dev/SimpMusic/releases/download/v${pkgver}/simpmusic_${pkgver}_amd64.deb"
+  "https://github.com/maxrave-dev/SimpMusic/releases/download/v${_pkgver}/simpmusic_${appver}_amd64.deb"
 )
-sha256sums=("bdc0527f0f51437b6d2931c630db2d6991bef4d9513caf78d987b30579c67af8")
+sha256sums=('5e08b82b8e9303fafb638b952bd4357ea1b57288b02218052f7b0fe31309ed5f')
 
 prepare() {
     bsdtar -xf data.tar.zst
