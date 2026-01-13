@@ -2,8 +2,8 @@
 
 
 pkgname=simpmusic-bin
-_pkgver=1.0.1-hf
-pkgver=1.0.1_hf
+_pkgver=1.0.1-hf-1
+pkgver=1.0.1_hf_1
 appver=1.0.1
 pkgrel=0
 pkgdesc="A FOSS YouTube Music client for Android and Desktop with many features from
@@ -47,7 +47,5 @@ package() {
         "${pkgdir}/usr/share/applications/simpmusic.desktop"
 
     # Permissions
-    find "${pkgdir}" -type d -exec chmod 755 {} \;
-    find "${pkgdir}" -type f -exec chmod 644 {} \;
     chmod 755 "${_basepath}/bin/SimpMusic" 2>/dev/null || true
 }
