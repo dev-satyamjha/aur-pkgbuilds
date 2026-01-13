@@ -2,9 +2,9 @@
 
 
 pkgname=simpmusic-bin
-_pkgver=1.0.1-hf-1
+_pkgver=1.0.1-hf
 pkgver=1.0.1_hf
-appver=1.0.1
+appver=1.0.1-1
 pkgrel=0
 pkgdesc="A FOSS YouTube Music client for Android and Desktop with many features from
 Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop."
