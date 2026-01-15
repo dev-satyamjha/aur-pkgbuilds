@@ -5,7 +5,7 @@ pkgname=simpmusic-bin
 _pkgver=1.0.1-hf
 pkgver=1.0.1_hf
 appver=1.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A FOSS YouTube Music client for Android and Desktop with many features from
 Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop."
 arch=(x86_64)
@@ -16,12 +16,17 @@ depends=("gstreamer" "gst-plugins-good" "gst-plugins-bad" "yt-dlp")
 conflicts=("${pkgname%}")
 options=("!strip" "!debug")
 
+# source=(
+#   "https://github.com/maxrave-dev/SimpMusic/releases/download/v${_pkgver}/simpmusic_${appver}_amd64.deb"
+# )
 source=(
-  "https://github.com/maxrave-dev/SimpMusic/releases/download/v${_pkgver}/simpmusic_${appver}_amd64.deb"
+    "https://nightly.link/maxrave-dev/SimpMusic/workflows/desktop-deb-package/dev/desktop-deb-package.zip"
 )
-sha256sums=('5e08b82b8e9303fafb638b952bd4357ea1b57288b02218052f7b0fe31309ed5f')
+sha256sums=('2388cc3cd3a3f06ad8bb1a7dbd80b252466d2f294c1f692bbc36ad7865d100ad')
 
 prepare() {
+    bsdunzip desktop-deb-package.zip
+    bsdtar -xf "simpmusic_${appver}_amd64.deb"
     bsdtar -xf data.tar.zst
 
     _basepath="${srcdir}/opt/simpmusic"
