@@ -1,7 +1,7 @@
 pkgbase = simpmusic-bin
 	pkgdesc = A FOSS YouTube Music client for Android and Desktop with many features from Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop.
-	pkgver = 1.0.1_hf
-	pkgrel = 3
+	pkgver = 1.0.2
+	pkgrel = 1
 	url = https://www.simpmusic.org
 	arch = x86_64
 	license = GPL-3.0
@@ -12,7 +12,7 @@ pkgbase = simpmusic-bin
 	conflicts = simpmusic-bin
 	options = !strip
 	options = !debug
-	source = https://nightly.link/maxrave-dev/SimpMusic/workflows/desktop-deb-package/dev/desktop-deb-package.zip
-	sha256sums = SKIP
+	source = https://github.com/maxrave-dev/SimpMusic/releases/download/v1.0.2/simpmusic_1.0.2_amd64.deb
+	sha256sums = 0e003aa6bfc8d7b0c42694194ad85cce11775c0de1676d908a7df0a0e76de3b0
 
 pkgname = simpmusic-bin
