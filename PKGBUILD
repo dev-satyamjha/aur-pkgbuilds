@@ -4,7 +4,7 @@
 pkgname=simpmusic-bin
 pkgver=1.0.3
 appver=1.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="A FOSS YouTube Music client for Android and Desktop with many features from
 Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop."
 arch=(x86_64)
@@ -21,11 +21,11 @@ source=(
 sha256sums=('4d3259db72de4ca66db4f70ecf4910cb157416a108e39ecbe17c58b8cf3d2cc1')
 
 prepare() {
-    bsdtar -xf data.tar.zst
+    bsdtar -xf data.tar.xz
 
     _basepath="${srcdir}/opt/simpmusic"
     # Add icon entry to .desktop
-    grep -qfx "StartupWMClass=com-maxrave-simpmusic-MainKt" "${_basepath}/lib/simpmusic-SimpMusic.desktop" || \
+    grep -qf "StartupWMClass=com-maxrave-simpmusic-MainKt" "${_basepath}/lib/simpmusic-SimpMusic.desktop" || \
     echo "StartupWMClass=com-maxrave-simpmusic-MainKt" >> "${_basepath}/lib/simpmusic-SimpMusic.desktop"
 }
 
